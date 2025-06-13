@@ -61,3 +61,7 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+    @app.post("/present")
+async def give_present(present):
+    return {"response": f"サーバです。勝利おめでとう。 {present}ありがとう。お返しはオロポです。"}
